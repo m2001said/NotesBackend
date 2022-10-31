@@ -14,7 +14,7 @@ const PORT = process.env.PORT || 8000;
 app.use(
   cors({
     credentials: true,
-    origin: "https://notesbackend-59jh.onrender.com/",
+    origin: "https://notes-s7p7.onrender.com",
   })
 );
 app.use(morgan("tiny"));
