@@ -10,7 +10,13 @@ const app = express();
 const PORT = process.env.PORT || 8000;
 
 // middleware
-app.use(cors());
+// app.use(cors());
+app.use(
+  cors({
+    credentials: true,
+    origin: "https://notesbackend-59jh.onrender.com/",
+  })
+);
 app.use(morgan("tiny"));
 app.use(express.json());
 app.use(cookieParser());
