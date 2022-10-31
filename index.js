@@ -25,6 +25,11 @@ app.use((err, req, res, next) => {
   return res.status(status).json({ message, stack: err.stack });
 });
 
+//
+app.get("/", (req, res) => {
+  res.send("App is running");
+});
+
 const connectDB = async () => {
   try {
     await mongoose.connect(process.env.DB_CONNECTION_STRING);
